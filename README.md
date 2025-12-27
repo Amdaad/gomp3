@@ -1,40 +1,37 @@
-## LeapKit Template
+GoMP3
+=====
 
-This is the LeapKit template for building web applications with Go, HTMX and Tailwind CSS.
+GoMP3 is a tiny YouTube-to-MP3 web app written in Go. It streams the converted MP3 back to the browser so the user downloads the audio immediately. The UI is built with gomponents, gomui, and htmx; the server uses Leapkit.
 
-### Getting Started
-#### Setup tools
+Features
+- Paste a YouTube URL and download the MP3 in one step
+- Renders a single, htmx-driven page with a responsive layout and dark mode toggle
+- Streams the generated file directly (no temp storage beyond conversion)
+- Ships with Tailwind-based styles compiled via `tailo` and Docker support with ffmpeg preinstalled
 
-To get going make sure you have Go 1.24 installed. Once you have Go installed, you can download the required dependencies:
+Requirements
+- Go 1.24+
+- ffmpeg available on your PATH (for local runs)
+- Tailwind CLI helper `tailo` for rebuilding CSS in development
+	- Install with `go tool tailo download`
 
-```sh
-go mod download
-```
+Quickstart (local)
+1) Install deps: `go mod download`
+2) Ensure ffmpeg is installed (macOS: `brew install ffmpeg`).
+3) Run the app: `go tool dev --watch.extensions=.go,.css,.js `
+4) Visit http://localhost:3000 and paste a YouTube link.
 
-#### Running the application
+Docker
+- Build: `docker build -t gomp3 .`
+- Run: `docker run --rm -p 3000:3000 gomp3`
+- ffmpeg is included in the image.
 
-To run the application while in development please use the following command:
-
-```sh
-go tool dev
-```
-
-This will use the `dev` tool to read the Procfile at the root of the project and start the application. It will automatically restart the app process when changes are detected in the .go files. The rest of the processes defined in the file will be running in parallel.
-Once the application is running, you can access it at http://localhost:3000.
+Configuration
+- `HOST` (default `0.0.0.0`)
+- `PORT` (default `3000`)
+- `SESSION_SECRET` (default random string)
+- `SESSION_NAME` (default `leapkit_session`)
 
 
-### Building the application
-
-One important part of the build process is to build the TailwindCSS styles. The tailo tool will take care of this.
-
-```sh
-go tool tailo -i internal/system/assets/tailwind.css -o internal/system/assets/application.css
-```
-
-Then building the application can be done with the following command:
-
-```sh
-go build -o bin/app ./cmd/app
-```
-
-That will create a binary file named `app` in the `bin` folder at the root of the project.
+Notes
+- The converter picks the best available audio stream from YouTube, runs ffmpeg, then streams the result to the client and removes the temp file.
