@@ -1,7 +1,10 @@
 FROM golang:1.24-alpine AS builder
-RUN apk --update add build-base
+
+# Install build dependencies and ffmpeg
+RUN apk --update add build-base ffmpeg
 
 WORKDIR /src/app
+
 # Adding go.mod and go.sum and downloading dependencies first
 # This is done to leverage Docker layer caching
 ADD go.* .
@@ -20,7 +23,13 @@ RUN go tool tailo --i internal/system/assets/tailwind.css -o internal/system/ass
 RUN go build -tags osusergo,netgo -o bin/app ./cmd/app
 
 FROM alpine
-RUN apk add --no-cache tzdata ca-certificates ffmpeg
+
+# Install runtime dependencies including ffmpeg (minimal build)
+RUN apk add --no-cache tzdata ca-certificates ffmpeg-libs ffmpeg
+
+# Set memory limits for ffmpeg (optional)
+ENV FFMPEG_DATADIR=/tmp
+ENV TMPDIR=/tmp
 
 WORKDIR /bin/
 
